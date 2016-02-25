@@ -18,7 +18,7 @@ book.json add the plugin
 
 ## Configuration
 
-book.json add the flowchart.js options
+book.json add the js-sequence-diagrams options
 
 ```
 "pluginsConfig": {
@@ -38,4 +38,10 @@ Alice->Bob: Hello Bob, how are you?
 Note right of Bob: Bob thinks
 Bob-->Alice: I am good thanks!
 {% endsequence %}
+```
+
+### Extend the width
+
+```
+{% sequence width=770 %}
 ```

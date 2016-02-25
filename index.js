@@ -10,14 +10,15 @@ module.exports = {
 
         var code    = blk.body;
         var options = this.book.options.pluginsConfig['sequence-diagrams'];
+        var width   = blk.kwargs['width'];
 
         phantom.create().then(function(ph) {
           ph.createPage().then(function(page) {
             var pagePath = path.join(__dirname, 'renderer.html');
             page.open(pagePath).then(function(status) {
-              var result = page.evaluate(function(code, options) {
-                return render(code, options);
-              }, code, options);
+              var result = page.evaluate(function(code, options, width) {
+                return render(code, options, width);
+              }, code, options, width);
               ph.exit();
               deferred.resolve(result);
             });

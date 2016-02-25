@@ -1,6 +1,6 @@
 {
   "name": "gitbook-plugin-sequence-diagrams",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "js-sequence-diagrams plugin for GitBook",
   "main": "index.js",
   "keywords": [
